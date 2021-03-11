@@ -25,7 +25,7 @@ export default class Customizator {
           if (!node.parentNode.getAttribute('data-fz')) {
             let value = window.getComputedStyle(node.parentNode, null).fontSize;
             
-            node.parentNode.setAttribute('data-fz', +value.replace(/px/g, ''))
+            node.parentNode.setAttribute('data-fz', +value.replace(/px/g, ''));
             node.parentNode.style.fontSize = node.parentNode.getAttribute('data-fz') * this.scale + 'px';
           } else {
             node.parentNode.style.fontSize = node.parentNode.getAttribute('data-fz') * this.scale + 'px';
@@ -35,7 +35,7 @@ export default class Customizator {
           recursy(node);
         }
       });
-    }
+    };
 
     recursy(body);
 
